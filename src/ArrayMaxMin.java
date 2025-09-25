@@ -13,15 +13,19 @@ public class ArrayMaxMin
         // declare and initialize the max and the min
     int max = -99999999;
     int min = 99999999;
+    int rowMax = 0;
 
         //
         for ( int row=0; row < data.length; row++)
         {
+            rowMax = 0;
             for ( int col=0; col < data[row].length; col++)
             {
                 if (data[row][col] > max) max = data[row][col];
                 if (data[row][col] < min) min = data[row][col];
+                if (data[row][col] > rowMax) rowMax = data[row][col];
             }
+            System.out.println(rowMax);
         }
 
         // write out the results
